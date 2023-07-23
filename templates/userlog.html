@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Intracranial Hemorrhage Detection - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://miro.medium.com/v2/resize:fit:1400/1*LZkjLWBOrXLCtQgOuS_LDw.jpeg"); /* Replace with the URL of your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 100px;
+            color: #f90000;
+        }
+        
+        form {
+            width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+        
+        label {
+            display: block;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #666;
+        }
+        
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            background-color: #666;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.2s ease;
+        }
+        
+        .btn:hover {
+            background-color: #555;
+        }
+        
+        .medical-image {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Intracranial Hemorrhage Detection</h1>
+    <form method="POST" action="{{url_for('image')}}">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <br><br>
+        <div class="checkbox mb-3">
+            <a class="btn btn-sm btn-secondary" href="{{ url_for('trick') }}">Login</a>
+         </div>
+    </form>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbnFVZssZDW2uXPg-1yf9QqVlWPPn5qog9kcZPwBPJNaWyO-x9z7tu40p6DKMOYjcFQyQ&usqp=CAU" class="medical-image"> <!-- Replace with the URL of your medical image -->
+</body>
+</html>
